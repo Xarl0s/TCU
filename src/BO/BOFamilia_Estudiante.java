@@ -9,14 +9,14 @@ package BO;
  *
  * @author Isidro
  */
-public class Familia_Estudiante {
+public class BOFamilia_Estudiante {
     private String Id_Est;//id del estudiante
     private String Id_Fam;//id de la familia
 
-    public Familia_Estudiante() {
+    public BOFamilia_Estudiante() {
     }
 
-    public Familia_Estudiante(String Id_Est, String Id_Fam) {
+    public BOFamilia_Estudiante(String Id_Est, String Id_Fam) {
         this.Id_Est = Id_Est;
         this.Id_Fam = Id_Fam;
     }

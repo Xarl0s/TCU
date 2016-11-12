@@ -1,4 +1,4 @@
-package BL;
+package GESTORA;
 
 import DAO.Conexion;
 

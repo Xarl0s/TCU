@@ -9,17 +9,17 @@ package BO;
  *
  * @author Isidro
  */
-public class Transaccion {
+public class BOTransaccion {
     
     private String Fecha;
     private double Monto;
     private String Id_Familia;
     private int Id_Pago_Anual;
 
-    public Transaccion() {
+    public BOTransaccion() {
     }
 
-    public Transaccion(String Fecha, double Monto, String Id_Familia, int Id_Pago_Anual) {
+    public BOTransaccion(String Fecha, double Monto, String Id_Familia, int Id_Pago_Anual) {
         this.Fecha = Fecha;
         this.Monto = Monto;
         this.Id_Familia = Id_Familia;

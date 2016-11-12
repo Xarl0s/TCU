@@ -9,15 +9,15 @@ package BO;
  *
  * @author Isidro
  */
-public class Pago_Anual {
+public class BOPago_Anual {
     
     private double Monto;
     private String Fecha_Cambio;
 
-    public Pago_Anual() {
+    public BOPago_Anual() {
     }
 
-    public Pago_Anual(double Monto, String Fecha_Cambio) {
+    public BOPago_Anual(double Monto, String Fecha_Cambio) {
         this.Monto = Monto;
         this.Fecha_Cambio = Fecha_Cambio;
     }
