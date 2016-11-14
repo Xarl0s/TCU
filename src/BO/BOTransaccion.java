@@ -60,7 +60,7 @@ public class BOTransaccion {
 
     @Override
     public String toString() {
-        return "Transaccion{" + "Fecha=" + Fecha + ", Monto=" + Monto + ", Id_Familia=" + Id_Familia + ", Id_Pago_Anual=" + Id_Pago_Anual + '}';
+        return "'" + Fecha + "','" + Monto + "','" + Id_Familia + "','" + Id_Pago_Anual + ';';
     }
     
     

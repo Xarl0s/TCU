@@ -39,7 +39,7 @@ public class BOFamilia_Estudiante {
 
     @Override
     public String toString() {
-        return "Familia_Estudiante{" + "Id_Est=" + Id_Est + ", Id_Fam=" + Id_Fam + '}';
+        return "'" + Id_Est + "', '" + Id_Fam + ';';
     }
     
     

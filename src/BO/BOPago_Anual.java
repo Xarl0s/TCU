@@ -40,7 +40,7 @@ public class BOPago_Anual {
 
     @Override
     public String toString() {
-        return "Pago_Anual{" + "Monto=" + Monto + ", Fecha_Cambio=" + Fecha_Cambio + '}';
+        return "'" + Monto + "','" + Fecha_Cambio + ';';
     }
     
 }

@@ -1,6 +1,6 @@
 package GESTORA;
 
-import DAO.Conexion;
+import DAO.DAOEstudiante;
 
 /**
  *
@@ -13,9 +13,10 @@ public class AdminPat {
      * @throws java.lang.Exception
      */
     public static void main(String[] args) throws Exception {
-        Conexion _Con = new Conexion();
-        _Con.conectar();
-        
+      
+        DAOEstudiante est = new DAOEstudiante();
+        String pito = "";//dependiendo de la consulta
+        est.insert(pito);
         
     }
 }

@@ -49,7 +49,7 @@ public class BOFamilia {
 
     @Override
     public String toString() {
-        return "BOFamilia{" + "Telefono=" + Telefono + ", Dir=" + Dir + ", Contacto_Principal=" + Contacto_Principal + '}';
+        return "'"+Telefono +"','"+ Dir+ "','" + Contacto_Principal + ';';
     }
     
     
