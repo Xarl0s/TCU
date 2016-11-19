@@ -1,6 +1,6 @@
 package GESTORA;
+import GUI.*;
 
-import DAO.DAOEstudiante;
 
 /**
  *
@@ -13,10 +13,8 @@ public class AdminPat {
      * @throws java.lang.Exception
      */
     public static void main(String[] args) throws Exception {
-      
-        DAOEstudiante est = new DAOEstudiante();
-        String pito = "";//dependiendo de la consulta
-        est.insert(pito);
+        pantalla_Principal p_Principal = new pantalla_Principal();
+        p_Principal.setVisible(true);
         
     }
 }

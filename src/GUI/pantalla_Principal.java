@@ -67,6 +67,11 @@ public class pantalla_Principal extends javax.swing.JFrame {
         });
 
         jButton2.setText("_agregar_familia");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("_agregar_estudiante");
 
@@ -174,7 +179,7 @@ public class pantalla_Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -190,6 +195,10 @@ public class pantalla_Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         /*para modificar el pago se requiere el id de la factura*/
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
