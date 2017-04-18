@@ -13,10 +13,10 @@ public class Conexion {
     protected Connection _conexion;
     
     private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private final String DB_URL = "jdbc:mysql://localhost:3306/mydb";
+    private final String DB_URL = "jdbc:mysql://localhost:3306/tcu_republica_de_francia";
     
     private final String USER = "root";
-    private final String PASS = "Hernandez93";
+    private final String PASS = "jj021493";
     
     public void Abrir() throws Exception{
         try {

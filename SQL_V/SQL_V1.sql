@@ -5,19 +5,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema TCU_REPUBLICA_DE_FRANCIA
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema TCU_REPUBLICA_DE_FRANCIA
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `TCU_REPUBLICA_DE_FRANCIA` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `TCU_REPUBLICA_DE_FRANCIA` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Estudiante`
+-- Table `TCU_REPUBLICA_DE_FRANCIA`.`Estudiante`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Estudiante` (
+CREATE TABLE IF NOT EXISTS `TCU_REPUBLICA_DE_FRANCIA`.`Estudiante` (
   `Id_Estudiante` VARCHAR(15) NOT NULL,
   `Apellido_1` VARCHAR(45) NOT NULL,
   `Apellido_2` VARCHAR(45) NULL,
@@ -27,9 +27,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Familia`
+-- Table `TCU_REPUBLICA_DE_FRANCIA`.`Familia`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Familia` (
+CREATE TABLE IF NOT EXISTS `TCU_REPUBLICA_DE_FRANCIA`.`Familia` (
   `Id_Familia` INT NOT NULL AUTO_INCREMENT,
   `Telefono` VARCHAR(45) NULL,
   `Direccion` VARCHAR(45) NULL,
@@ -39,9 +39,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Pago_Anual`
+-- Table `TCU_REPUBLICA_DE_FRANCIA`.`Pago_Anual`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Pago_Anual` (
+CREATE TABLE IF NOT EXISTS `TCU_REPUBLICA_DE_FRANCIA`.`Pago_Anual` (
   `Id_Pago_Anual` INT NOT NULL AUTO_INCREMENT,
   `Monto` DOUBLE NOT NULL,
   `Fecha_Cambio` DATETIME NOT NULL,
@@ -50,30 +50,30 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Familia_Estudiante`
+-- Table `TCU_REPUBLICA_DE_FRANCIA`.`Familia_Estudiante`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Familia_Estudiante` (
+CREATE TABLE IF NOT EXISTS `TCU_REPUBLICA_DE_FRANCIA`.`Familia_Estudiante` (
   `Estudiante_Id_Estudiante` VARCHAR(15) NOT NULL,
   `Familia_Id_Familia` INT NOT NULL,
   PRIMARY KEY (`Estudiante_Id_Estudiante`, `Familia_Id_Familia`),
   INDEX `fk_Familia_Estudiante_Familia1_idx` (`Familia_Id_Familia` ASC),
   CONSTRAINT `fk_Familia_Estudiante_Estudiante`
     FOREIGN KEY (`Estudiante_Id_Estudiante`)
-    REFERENCES `mydb`.`Estudiante` (`Id_Estudiante`)
+    REFERENCES `TCU_REPUBLICA_DE_FRANCIA`.`Estudiante` (`Id_Estudiante`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Familia_Estudiante_Familia1`
     FOREIGN KEY (`Familia_Id_Familia`)
-    REFERENCES `mydb`.`Familia` (`Id_Familia`)
+    REFERENCES `TCU_REPUBLICA_DE_FRANCIA`.`Familia` (`Id_Familia`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Transaccion`
+-- Table `TCU_REPUBLICA_DE_FRANCIA`.`Transaccion`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Transaccion` (
+CREATE TABLE IF NOT EXISTS `TCU_REPUBLICA_DE_FRANCIA`.`Transaccion` (
   `Id_Transaccion` INT NOT NULL AUTO_INCREMENT,
   `Fecha` VARCHAR(45) NOT NULL,
   `Monto` DOUBLE NOT NULL,
@@ -84,12 +84,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Transaccion` (
   INDEX `fk_Transaccion_Pago_Anual1_idx` (`Pago_Anual_Id_Pago_Anual` ASC),
   CONSTRAINT `fk_Transaccion_Familia1`
     FOREIGN KEY (`Id_Familia`)
-    REFERENCES `mydb`.`Familia` (`Id_Familia`)
+    REFERENCES `TCU_REPUBLICA_DE_FRANCIA`.`Familia` (`Id_Familia`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Transaccion_Pago_Anual1`
     FOREIGN KEY (`Pago_Anual_Id_Pago_Anual`)
-    REFERENCES `mydb`.`Pago_Anual` (`Id_Pago_Anual`)
+    REFERENCES `TCU_REPUBLICA_DE_FRANCIA`.`Pago_Anual` (`Id_Pago_Anual`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
